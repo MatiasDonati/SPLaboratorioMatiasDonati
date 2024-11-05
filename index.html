@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matias Donati - Segundo Parcial Laboratorio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="spinner_container">
+            <img src="Spinner.webp" id="spinner">
+        </div>
+        <section id="formPpal" class="forms">
+            <h1 style="text-align:center;" id="formPpalTitulo">Formulario Lista</h1>
+
+            <table id="tabla">
+                <thead class="cabeceraTabla">
+                    <tr id="fila">
+                        <th class="col_id" id="cab_id">ID</th>
+                        <th class="col_modelo" id="cab_modelo"> Modelo</th>
+                        <th class="col_anoFabricacion" id="cab_anoFabricacion">Ano de Fabricacion</th>
+                        <th class="col_velMax" id="cab_velMax">Velocidad Maxima</th>
+                        <th class="col_cantidadPuertas" id="cab_cantidadPuertas">Cantidad de Puertas</th>
+                        <th class="col_asientos" id="cab_asientos">Asientos</th>
+                        <th class="col_carga" id="cab_carga">Carga</th>
+                        <th class="col_autonomia" id="cab_autonomia">Autonomia</th>
+                        <th class="col_modificar" id="cab_modificar">Modificar</th>
+                        <th class="col_eliminar" id="cab_eliminar">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla" id="fuenteCuerpo"></tbody>
+            </table>
+            <button type="button" class="botones" id="agregar">Agregar Elemento</button>
+        </section>
+
+
+        <section id="formABM" class="forms">
+            <div class="containerABM">
+                <h3 id="formTitulo">Formulario ABM</h3>
+                <form>
+                    <div class="formInputs">
+                        <div id="div_id" class="inputABM">
+                            <label>ID:</label>
+                            <input type="number" id="inp_id" readonly style="cursor: not-allowed;" placeholder="Autogenerado">
+                        </div>
+                        <div id="div_modelo" class="inputABM">
+                            <label>Modelo:</label>
+                            <input type="text" id="inp_modelo" placeholder="Modelo">
+                        </div>
+                        <div id="div_anoFabricacion" class="inputABM">
+                            <label>Ano de Fabricacion:</label>
+                            <input type="text"  id="inp_anoFabricacion" placeholder="Mayor a 1985">
+                        </div>
+                        <div id="div_velMax" class="inputABM">
+                            <label>Velocidad Maxima:</label>
+                            <input type="number" id="inp_velMax" placeholder="Mayor a 0">
+                        </div>
+
+                        <div id="div_tipo" class="inputABM">
+                            <label for="abmSel_tipo">Tipo:</label>
+                            <select id="abmSel_tipo">
+                                <option value="" selected disabled>Seleccione Tipo</option>
+                                <option value='C'>Auto</option>
+                                <option value='E'>Camion</option>
+                            </select>
+                        </div>
+                        <div class="inputAuto">
+                            <div id="div_cantPuertas" class="inputABM">
+
+                                <label>Cantidad de Puertas:</label>
+                                <input type="number" id="inp_cantPuertas" placeholder="Mayor a 2">
+                                <label>Asientos:</label>
+                                <input type="number" id="inp_asientos" placeholder="Mayor a 2">
+
+                            </div>
+                        </div>
+                        <div class="inputCamion">
+                            <div id="div_carga" class="inputABM">
+
+                                <label>Carga:</label>
+                                <input type="text" id="inp_carga" placeholder="Mayor a 0">
+                                <label>Autonmia:</label>
+                                <input type="text" id="inp_autonomia" placeholder="Mayor a 0">
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="abmBotones">
+                    <button type="submit" class="botones" id="aceptar">Ok</button>
+                    <button type="button" class="botones" id="cancelar">Cancelar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script type="text/javascript" src="clases.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
