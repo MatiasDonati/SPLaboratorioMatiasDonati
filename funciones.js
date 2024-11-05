@@ -350,7 +350,7 @@ abmAceptar.onclick = function () {
             auto.autoExiste(auxVehiculos) ? alert("Este auto ya existe!") : AltaVehiculo(auto);
         } else if (abmSel_tipo.value === 'E') {
 			let camion = new Camion(null, abmModelo, abmAnoFabricacion, abmVelMax, abmCarga, abmAutonomia);
-            camion.camionExiste(auxVehiculos) ? alert("Este ciudadano ya existe!") : AltaVehiculo(camion);
+            camion.camionExiste(auxVehiculos) ? alert("Este camion ya existe!") : AltaVehiculo(camion);
         } else {
             SwalFireError('Completa bien los datos!');
         }
